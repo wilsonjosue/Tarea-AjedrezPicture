@@ -16,9 +16,9 @@ class Picture:
     """ Invertimos el orden de las filas vertical = self.img[::-1] return vertical"""
     vertical = []
     for value in self.img:
-    	vertical.append(value[::-1])
-    return vertical
-  
+    	vertical.append(value[::-1])  
+    return Picture(vertical)
+    
   def horizontalMirror(self):
     """ Devuelve el espejo horizontal de la imagen """
     horizontal = []
@@ -27,9 +27,8 @@ class Picture:
       for char in row:
         mirrored_row = char + mirrored_row
         horizontal.append(mirrored_row)
-    return horizontal
-    #return Picture(None)
-
+    return Picture(horizontal)
+   
   def negative(self):
     """ Devuelve un negativo de la imagen """
     return Picture(None)

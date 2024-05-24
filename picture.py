@@ -1,7 +1,7 @@
 from colors import *
 class Picture:
   def __init__(self, img):
-    self.img = img;
+    self.img = img
 
   def __eq__(self, other):
     return self.img == other.img
@@ -18,10 +18,9 @@ class Picture:
     #Invertimos el orden de las filas vertical = self.img[::-1] return vertical"""
     vertical = []#Almacena las imagen del espejo vertucal.
     for row in self.img:
-    	vertical.append(row[::-1])   
+    	vertical.append(row[::-1]) 
     return Picture(vertical)
-  
-
+      
   def horizontalMirror(self):
     """ Devuelve el espejo horizontal de la imagen"""
     horizontal = [] #Almacena las imagen en orden inverso.
@@ -69,12 +68,11 @@ class Picture:
 
   #Extra: Sólo para realmente viciosos 
   def rotate(self):
-    """Devuelve una figura rotada en 90 grados, puede ser en sentido horario
-    o antihorario"""
-    # Transpone la matriz (intercambia filas por columnas) y luego invierte el orden de las filas
+    """Devuelve una figura rotada en 90 grados, puede ser en sentido horario o antihorario"""
+    #Luego invierte el orden de las filas
     #rotated = [''.join(row) for row in zip(*self.img[::-1])]
-    transpose= list.zip(*self.img) 
-    rotar= ["".join(row) for row in transpose[::-1]]
+    transpose= list.zip(*self.img)#Transpone la matriz (intercambia filas por columnas)
+    rotar= ["".join(row) for row in transpose[::-1]]#Luego invierte el orden de las filas
     return Picture(rotar)# Devuelve una nueva instancia de Picture con la imagen rotada
-    
+# Fin de la clase Picture 
 

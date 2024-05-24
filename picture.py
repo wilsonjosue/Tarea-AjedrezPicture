@@ -71,5 +71,10 @@ class Picture:
   def rotate(self):
     """Devuelve una figura rotada en 90 grados, puede ser en sentido horario
     o antihorario"""
-    return Picture(None)
+    # Transpone la matriz (intercambia filas por columnas) y luego invierte el orden de las filas
+    #rotated = [''.join(row) for row in zip(*self.img[::-1])]
+    transpose= list.zip(*self.img) 
+    rotar= ["".join(row) for row in transpose[::-1]]
+    return Picture(rotar)# Devuelve una nueva instancia de Picture con la imagen rotada
+    
 

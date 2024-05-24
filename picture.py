@@ -12,7 +12,7 @@ class Picture:
     return inverter[color]
 
   """ row en Python,se refiere a una fila específica dentro de una estructura de datos bidimensional."""
-  
+
   def verticalMirror(self):
     """ Devuelve el espejo vertical de la imagen """
     #Invertimos el orden de las filas vertical = self.img[::-1] return vertical"""
@@ -63,7 +63,9 @@ class Picture:
     return Picture(repitiendo)
 
   def verticalRepeat(self, n):
-    return Picture(None)
+    """ Devuelve una nueva figura repitiendo la figura actual hacia abajo la cantidad de veces que indique el valor de n """
+    repetirV = (self.img*n) 
+    return Picture(repetirV)
 
   #Extra: Sólo para realmente viciosos 
   def rotate(self):

@@ -42,7 +42,8 @@ class Picture:
     return Picture(imgUnido) #Devuelve una nueva instancia de Picture con la imagen unida
 
   def up(self, p):
-    return Picture(None)
+    devolver = p.img + self.img # Une las filas de p.img encima de las filas de self.img
+    return Picture(devolver)
 
   def under(self, p):
     """ Devuelve una nueva figura poniendo la figura p sobre la

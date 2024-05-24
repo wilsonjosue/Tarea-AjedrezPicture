@@ -13,22 +13,26 @@ class Picture:
 
   def verticalMirror(self):
     """ Devuelve el espejo vertical de la imagen """
-    """ Invertimos el orden de las filas vertical = self.img[::-1] return vertical"""
+    #Invertimos el orden de las filas vertical = self.img[::-1] return vertical"""
     vertical = []#Almacena las imagen del espejo vertucal.
     for value in self.img:
-    	vertical.append(value[::-1])  
+    	vertical.append(value[::-1])   
     return Picture(vertical)
     
   def horizontalMirror(self):
     """ Devuelve el espejo horizontal de la imagen"""
     horizontal = [] #Almacena las imagen en orden inverso.
     for i in range(len(self.img)-1,-1,-1):#Invierte el orden de las líneas en la imagen.
-      horizontal.append(self.img)
+      horizontal.append(self.img) #para añadir un elemento al final de una lista
     return Picture(horizontal)
   
   def negative(self):
     """ Devuelve un negativo de la imagen """
-    return Picture(None)
+    negative = [] # Almacena el negatico de la imagen.
+    for row in self.img: #Convierte cada carácter de fila a su color negativo
+      neg_row = ''.join([self._invColor(c) for c in row])
+      negative.append(neg_row)# une los caracteres en una nueva fila
+    return Picture(negative)
 
   def join(self, p):
     """ Devuelve una nueva figura poniendo la figura del argumento 

@@ -23,7 +23,7 @@ class Picture:
     """ Devuelve el espejo horizontal de la imagen"""
     horizontal = [] #Almacena las imagen en orden inverso.
     for i in range(len(self.img)-1,-1,-1):#Invierte el orden de las líneas en la imagen.
-      horizontal.append(self.img) #para añadir un elemento al final de una lista
+      horizontal.append(self.img) #Para añadir un elemento al final de una lista
     return Picture(horizontal)
   
   def negative(self):
@@ -31,13 +31,15 @@ class Picture:
     negative = [] # Almacena el negatico de la imagen.
     for row in self.img: #Convierte cada carácter de fila a su color negativo
       neg_row = ''.join([self._invColor(c) for c in row])
-      negative.append(neg_row)# une los caracteres en una nueva fila
+      negative.append(neg_row)#Une los caracteres en una nueva fila
     return Picture(negative)
 
   def join(self, p):
-    """ Devuelve una nueva figura poniendo la figura del argumento 
-        al lado derecho de la figura actual """
-    return Picture(None)
+    """ Devuelve una nueva figura poniendo la figura del argumento al lado derecho de la figura actual """
+    imgUnido = []  # Lista para almacenar la imagen unida
+    for row1, row2 in zip(self.img,p.img):#Itera sobre las filas de ambas imágenes
+       imgUnido.append(row1+row2)#Une las filas de ambas imágenes y las añade a la lista
+    return Picture(imgUnido) #Devuelve una nueva instancia de Picture con la imagen unida
 
   def up(self, p):
     return Picture(None)

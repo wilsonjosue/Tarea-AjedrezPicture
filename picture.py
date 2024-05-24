@@ -13,9 +13,7 @@ class Picture:
 
   def verticalMirror(self):
     """ Devuelve el espejo vertical de la imagen """
-    """ Invertimos el orden de las filas
-        vertical = self.img[::-1]
-        return vertical"""
+    """ Invertimos el orden de las filas vertical = self.img[::-1] return vertical"""
     vertical = []
     for value in self.img:
     	vertical.append(value[::-1])

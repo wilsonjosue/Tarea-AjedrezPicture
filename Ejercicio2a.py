@@ -6,7 +6,7 @@ from chessPictures import knight
 white_knight = knight # Imagen del caballo blanco 
 black_knight = knight.negative() # Imagen del caballo negro 
 
-# Posiciones de los caballos Mij varuable
+# Posiciones de los caballos Mij variable
 M11 = white_knight # Caballo blanco en la esquina superior derecha
 M10 = black_knight # Caballo negro en la esquina inferior derecha
 M01 = black_knight # Caballo blanco en la esquina superior izquierda

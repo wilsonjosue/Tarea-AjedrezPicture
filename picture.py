@@ -22,8 +22,9 @@ class Picture:
    """ 
   def verticalMirror(self):
     """Devuelve el espejo vertical de la imagen"""
-    return Picture(None) 
-  
+    vertical = self.img[::-1]  # Invertir el orden de las filas
+    return Picture(vertical)  # Devolver una nueva instancia de Picture con el espejo vertical
+
   def horizontalMirror(self):
     """ Devuelve el espejo horizontal de la imagen"""
     #Almacena las imagen en orden inverso.

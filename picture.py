@@ -13,13 +13,13 @@ class Picture:
 
   """ row en Python,se refiere a una fila específica dentro de una estructura de datos bidimensional."""
 
-  def verticalMirror(self):
-    """ Devuelve el espejo vertical de la imagen """
-    #Invertimos el orden de las filas vertical = self.img[::-1] return vertical"""
+  """def verticalMirror(self):  Devuelve el espejo vertical de la imagen
+    #Invertimos el orden de las filas vertical = self.img[::-1] return vertical
     vertical = []#Almacena las imagen del espejo vertucal.
     for row in self.img:
     	vertical.append(row[::-1]) 
-    return Picture(vertical)
+    return Picture(vertical) 
+   """ 
       
   def horizontalMirror(self):
     """ Devuelve el espejo horizontal de la imagen"""

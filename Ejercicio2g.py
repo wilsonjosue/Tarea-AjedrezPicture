@@ -3,6 +3,8 @@ from chessPictures import *
 
 
 """Crear las imágenes necesarias."""
+black_square = square.negative() # Imagen vacia negra.
+white_square = square # Imagen vacia blanca. 
 pawn_black = pawn.negative() #_black negro
 pawn_white = pawn
 bishop_black = bishop.negative()
@@ -16,23 +18,25 @@ king_white = king
 queen_black = queen.negative()
 queen_white = queen
 
-"""Ingresamos los datos a la tabla para las piezas negras"""
-posicion_inicial =[
-    rock_black, knight_black, bishop_black, queen_black, king_black, bishop_black, knight_black, 
-    rock_black,pawn_black, pawn_black, pawn_black, pawn_black, pawn_black, pawn_black, pawn_black, 
-    pawn_black,
-]
+""" Se realizara un bucle for para llenar la matriz empezando con el casillero para cada tipo"""
+# Crea una matriz 8x8 para representar el tablero
+tablero = [[None] * 8 for _ in range(8)]
 
-# Organiza las imágenes de las piezas en el tablero
-tablero = posicion_inicial[0]  # Inicializa el tablero con la primera imagen de la lista
+# Llena el tablero con las casillas alternadas
+for i in range(8):
+    for j in range(8):
+        if (i + j) % 2 == 0:
+            tablero[i][j] = white_square
+        else:
+            tablero[i][j] = black_square
 
-n = 8  # Número de casillas en una fila.
+# Coloca las piezas de ajedrez sobre las casillas correspondientes
+# Por ejemplo, aquí colocamos peones en las filas 2 y 7
+for j in range(8):
+    tablero[1][j] = pawn_black
+    tablero[6][j] = pawn_white
 
-"""Une las imágenes horizontalmentelizara un bucle for para llenar la matriz empezando con el casillero para cada tipo"""
-for img in posicion_inicial[1:]:
-    tablero = tablero.join(img)  # Une las imágenes horizontalmente
-"""Unir los dos con up para unir las filas de p.img encima de las filas de self.img""" 
-
-# Dibujar
+# Dibuja el tablero con las piezas
 draw(tablero)
+
 

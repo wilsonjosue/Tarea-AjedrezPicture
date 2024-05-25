@@ -1,9 +1,6 @@
 from chessPictures import *
-from interpreter import *
-from chessPictures import *
 from interpreter import draw
 from chessPictures import knight
-from colors import *
 # Crear las imágenes necesarias
 white_knight = knight  # Imagen del caballo blanco
 black_knight = knight.negative()  # Imagen del caballo negro

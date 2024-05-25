@@ -28,10 +28,10 @@ class Picture:
     """ Devuelve el espejo horizontal de la imagen"""
     #Almacena las imagen en orden inverso.
     horizontal = [] #Almacena las imagen en orden inverso.
-    for i in range(len(self.img)-1,-1,-1):#Invierte el orden de las líneas en la imagen.
-      horizontal.append(self.img)
-    #Invierte el orden de las líneas en la imagen.Para añadir un elemento al final de una lista"
-    #horizontal = [row[::-1] for row in self.img]Almacena las imagen en orden inverso.  
+    for row in self.img:#Invierte el orden de cada fila en la imagen.
+    #horizontal = [row[::-1] for row in self.img]Almacena las imagen en orden inverso
+      inverted_row = row[::-1]  # Invertir la fila
+      horizontal.append(inverted_row)
     return Picture(horizontal)
   
   def negative(self):

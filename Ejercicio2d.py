@@ -3,8 +3,8 @@ from chessPictures import *
 from chessPictures import square
 
 """Crear las imágenes necesarias."""
-black_square = square # Imagen vacia negra.
-white_square = square.negative() # Imagen vacia blanca. 
+black_square = square.negative() # Imagen vacia negra.
+white_square = square# Imagen vacia blanca. 
 
 """Crea la matriz row vacia"""
 row=[]

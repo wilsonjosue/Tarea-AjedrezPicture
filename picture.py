@@ -1,8 +1,12 @@
 from colors import *
+
 class Picture:
+
+  """creas un nuevo objeto Picture, pasas una imagen como argumento, y esta se almacenará en el atributo img del objeto."""
   def __init__(self, img):
     self.img = img
-
+ 
+  """Si ambos atributos son iguales, la función devuelve True; de lo contrario, devuelve False."""
   def __eq__(self, other):
     return self.img == other.img
 

@@ -8,12 +8,20 @@ white_square = square.negative() # Imagen vasia blanca.
 
 """Crea la matriz row vacia"""
 row=[]
+n=8
 """ Se realizara un bucle for pra llenar la matriz luego imprimirla"""
-for i in range(8):
+for i in range(n):
     if i%2== 0:
         row.append(white_square) 
     else:
         row.append(black_square)
 
+"""Forma de unir los datos del arreglo row"""
+row_picture = row[0]# Asignar a row_picture el primer elemento de row
+
+"""join(self, p):Devuelve nueva figura poniendo la figura del argumento al lado derecho de la figura actual"""
+for i in range(1,len(row)):#Unir todas las imágenes en una fila
+    row_picture=row_picture.join(row[i])#Los pone asu lado derecho
+
 # Dibujar
-draw(row)
+draw(row_picture)

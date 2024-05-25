@@ -29,7 +29,7 @@ tablero = posicion_inicial[0]  # Inicializa el tablero con la primera imagen de 
 n = 8  # Número de casillas en una fila.
 
 """Une las imágenes horizontalmentelizara un bucle for para llenar la matriz empezando con el casillero para cada tipo"""
-for img in initial_positions[1:]:
+for img in posicion_inicial[1:]:
     tablero = tablero.join(img)  # Une las imágenes horizontalmente
 """Unir los dos con up para unir las filas de p.img encima de las filas de self.img""" 
 

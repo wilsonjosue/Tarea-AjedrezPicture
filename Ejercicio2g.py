@@ -20,11 +20,11 @@ queen_white = queen
 
 """ Se realizara un bucle for para llenar la matriz empezando con el casillero para cada tipo"""
 # Crea una matriz 8x8 para representar el tablero
-tablero = [[None] * 4 for _ in range(4)]
+tablero = [[None] * 8 for _ in range(8)]
 
 # Llena el tablero con las casillas alternadas
-for i in range(4):
-    for j in range(4):
+for i in range(8):
+    for j in range(8):
         if (i + j) % 2 == 0:
             tablero[i][j] = white_square
         else:
@@ -33,8 +33,8 @@ for i in range(4):
 # Coloca las piezas de ajedrez sobre las casillas correspondientes
 # Por ejemplo, aquí colocamos peones en las filas 2 y 7
 #for j in range(8):
-    tablero[1][1] = tablero[1][1].over(pawn_black) # Superponer peón negro sobre casilla
-    tablero[2][1] = tablero[2][1].over(pawn_white) # Superponer whire negro sobre casilla
+    tablero[1][2] = tablero[1][2].over(pawn_black) # Superponer peón negro sobre casilla
+    tablero[2][2] = tablero[2][2].over(pawn_white) # Superponer whire negro sobre casilla
 
 # Dibuja el tablero con las piezas
 draw(tablero)

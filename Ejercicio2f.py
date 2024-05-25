@@ -31,6 +31,6 @@ for i in range(1,len(row1)):#Unir todas las imágenes en una fila.
     row2_picture=row2_picture.join(row2[i])#Los pone a su lado derecho.
 
 """Unir los dos con up para unir las filas de p.img encima de las filas de self.img""" 
-nueva_tabla=row1_picture.up(row2_picture).up(row1_picture).up(row2_picture)
+nueva_tabla=row2_picture.up(row1_picture).up(row2_picture).up(row1_picture)
 # Dibujar
 draw(nueva_tabla)

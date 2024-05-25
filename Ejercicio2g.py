@@ -1,7 +1,6 @@
 from interpreter import draw
 from chessPictures import *
 
-
 """Crear las imágenes necesarias."""
 black_square = square.negative() # Imagen vacia negra.
 white_square = square # Imagen vacia blanca. 
@@ -33,8 +32,8 @@ for i in range(8):
 # Coloca las piezas de ajedrez sobre las casillas correspondientes
 # Por ejemplo, aquí colocamos peones en las filas 2 y 7
 #for j in range(8):
-    tablero[1][2] = tablero[1][2].over(pawn_black) # Superponer peón negro sobre casilla
-    tablero[2][2] = tablero[2][2].over(pawn_white) # Superponer whire negro sobre casilla
+tablero[1][2] = tablero[1][2].over(pawn_black) # Superponer peón negro sobre casilla
+tablero[2][2] = tablero[2][2].over(pawn_white) # Superponer whire negro sobre casilla
 
 # Dibuja el tablero con las piezas
 draw(tablero)

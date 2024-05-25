@@ -1,4 +1,6 @@
 from chessPictures import *
+from interpreter import *
+from chessPictures import *
 from interpreter import draw
 from chessPictures import knight
 from colors import *

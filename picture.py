@@ -24,8 +24,7 @@ class Picture:
   def horizontalMirror(self):
     """ Devuelve el espejo horizontal de la imagen"""
     #Almacena las imagen en orden inverso.
-    #Invierte el orden de las líneas en la imagen.
-    #Para añadir un elemento al final de una lista"
+    #Invierte el orden de las líneas en la imagen.Para añadir un elemento al final de una lista"
     horizontal = [row[::-1] for row in self.img]#Almacena las imagen en orden inverso.  
     return Picture(horizontal)
   
@@ -73,7 +72,7 @@ class Picture:
     #Luego invierte el orden de las filas
     #rotated = [''.join(row) for row in zip(*self.img[::-1])]
     transpose= list.zip(*self.img)#Transpone la matriz (intercambia filas por columnas)
-    rotar= ["".join(row) for row in transpose[::-1]]#Luego invierte el orden de las filas
+    rotar= [''.join(row) for row in transpose[::-1]]#Luego invierte el orden de las filas
     return Picture(rotar)# Devuelve una nueva instancia de Picture con la imagen rotada
 # Fin de la clase Picture 
 

@@ -20,12 +20,18 @@ class Picture:
     	vertical.append(row[::-1]) 
     return Picture(vertical) 
    """ 
-      
+  def verticalMirror(self):
+    """Devuelve el espejo vertical de la imagen"""
+    return Picture(None) 
+  
   def horizontalMirror(self):
     """ Devuelve el espejo horizontal de la imagen"""
     #Almacena las imagen en orden inverso.
+    horizontal = [] #Almacena las imagen en orden inverso.
+    for i in range(len(self.img)-1,-1,-1):#Invierte el orden de las líneas en la imagen.
+      horizontal.append(self.img)
     #Invierte el orden de las líneas en la imagen.Para añadir un elemento al final de una lista"
-    horizontal = [row[::-1] for row in self.img]#Almacena las imagen en orden inverso.  
+    #horizontal = [row[::-1] for row in self.img]Almacena las imagen en orden inverso.  
     return Picture(horizontal)
   
   def negative(self):

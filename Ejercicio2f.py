@@ -25,8 +25,12 @@ for i in range(n):
 row1_picture = row1[0]# Asignar a row_picture el primer elemento de row1.
 row2_picture = row2[0]# Asignar a row_picture el primer elemento de row2.
 """join(self, p):Devuelve nueva figura poniendo la figura del argumento al lado derecho de la figura actual"""
+
 for i in range(1,len(row1)):#Unir todas las imágenes en una fila.
-    row_picture=row_picture.join(row1[i])#Los pone a su lado derecho.
-    
+    row1_picture=row1_picture.join(row1[i])#Los pone a su lado derecho.
+    row2_picture=row2_picture.join(row2[i])#Los pone a su lado derecho.
+
+"""Unir los dos con up para unir las filas de p.img encima de las filas de self.img""" 
+nueva_tabla=row1_picture.up(row2_picture).up(row1_picture).up(row2_picture)
 # Dibujar
-draw(row_picture)
+draw(nueva_tabla)

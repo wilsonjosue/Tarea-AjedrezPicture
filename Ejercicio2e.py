@@ -8,7 +8,7 @@ white_square = square # Imagen vacia blanca.
 
 """Crea la matriz row vacia"""
 row1=[]
-n=8
+n=8 # Cantidad de iteraciones
 
 """ Se realizara un bucle for para llenar la matriz empezando con el casillero negro"""
 for i in range(n):

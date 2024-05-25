@@ -4,10 +4,7 @@ from chessPictures import knight
 
 # Crear las imágenes necesarias
 white_knight = knight # Imagen del caballo blanco 
-black_knight = knight # Imagen del caballo negro 
-
-hite_knight = Picture(knight)  # Imagen del caballo blanco
-black_knight = Picture(knight.negative())  # Imagen del caballo negro
+black_knight = knight.negative() # Imagen del caballo negro 
 # Posiciones de los caballos
 M11 = white_knight # Caballo blanco en la esquina superior derecha
 M10 = black_knight # Caballo negro en la esquina inferior derecha
